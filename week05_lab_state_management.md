@@ -734,7 +734,7 @@ class HomePage extends ConsumerWidget {
 
 - ต้องตัดสินใจเองว่าค่าคำค้นหาควรเป็น Ephemeral State หรือ App State พร้อมให้เหตุผลสั้น ๆ ไว้ในช่องด้านล่าง
   ```text
-
+   ค่าคำค้นหาเป็น UI‑only, ชั่วคราว และไม่จำเป็นต้องแชร์ข้ามหน้า/persisted (ไม่ต้องการ global coordination หรือ persistence) — ใช้ setState ง่ายสุด เบาที่สุด และจำกัดการรี‑build ให้แค่อินสแตนซ์ของหน้าเดียว เมื่ออนาคตต้องการแชร์คำค้นหา (เช่น deep link, saved filters หรือ sync ระหว่างหลายหน้า) ค่อยย้ายเป็น App State (Provider/Riverpod/Bloc) ได้
   ```
 - ถ้าตัดสินใจว่าเป็น Ephemeral State ห้ามใช้ Provider สำหรับฟีเจอร์นี้ ให้ฝึกเลือกใช้เครื่องมือที่เบาที่สุดที่เพียงพอ (`setState` ธรรมดา)
 

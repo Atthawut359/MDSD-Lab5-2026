@@ -746,8 +746,8 @@ class HomePage extends ConsumerWidget {
 
 - ต้องใช้ `context.read` หรือ `context.watch` ให้ถูกต้องตามหลักการ และอธิบายเหตุผลการเลือก ในช่องด้านล่าง
   ```text
-
-
+  context.watch: เหมาะเมื่อ widget ต้องการสมัครรับการเปลี่ยนแปลงและรีบิลด์ (เช่น แสดง/ซ่อนปุ่มตามสถานะ และแสดงรายการ)
+  context.read: เหมาะสำหรับการกระทำแบบครั้งเดียว (เช่น clear/remove) เพราะไม่ต้องการรีบิลด์จากจุดที่เรียก
   ```
 - ปุ่มต้องแสดงเฉพาะเมื่อมีรายการโปรดอย่างน้อย 1 รายการเท่านั้น (ถ้ารายการว่างอยู่แล้วไม่ต้องแสดงปุ่มนี้)
 
@@ -756,7 +756,9 @@ class HomePage extends ConsumerWidget {
 ทำโจทย์ที่ 1 และ 2 ซ้ำอีกครั้งในโปรเจกต์ทดลอง Riverpod (ส่วนที่ 4) 
 
 > ✅ **Checkpoint 5.1** ถ่ายภาพหน้าจอฟีเจอร์ค้นหาที่กรองสินค้าได้ถูกต้อง และภาพ Dialog ยืนยันการล้างรายการโปรด เขียนอธิบายเหตุผลการเลือกชนิด State ของทั้งสองฟีเจอร์ ในช่องด้านล่าง
-```text
+
+<img width="1590" height="901" alt="image" src="https://github.com/user-attachments/assets/1a78b094-d260-42c1-8b0d-6c886fd12e9c" />
+<img width="1588" height="903" alt="image" src="https://github.com/user-attachments/assets/326a15d3-a085-43da-941b-ebb0d0a63394" />
 
 
-```
+
